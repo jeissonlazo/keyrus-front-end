@@ -20,7 +20,7 @@ body {
         z-index: 10;
     }
     .login-alert-danger{
-        display: block;
+        display: none;
         position: relative;
         background:#EE7272;
         border: 1px solid #DB5252;
@@ -37,7 +37,7 @@ body {
         }
     }
     .login-alert-success{
-        display: block;
+        display: none;
         position: relative;
         background:#5BDD9A;
         border: 1px solid #49CF8B;
