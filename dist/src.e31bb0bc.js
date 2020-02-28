@@ -18152,8 +18152,61 @@ require("animate.css");
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 window.$ = window.jQuery = _jquery.default;
-//document.querySelector('h1').textContent = bro('how is going');
-console.log($('#successAlert').text());
+var servicesUrl = 'https://swapi.co/api/people/';
+
+var callAlert = function callAlert(alertType) {
+  if (alertType == 'error') {
+    var alert = $('#errorAlert');
+    alert.removeClass('fadeOutLeft');
+    alert.addClass('animated fadeInRight').css({
+      'display': 'block'
+    });
+    setTimeout(function () {
+      alert.removeClass('fadeInRight').addClass('fadeOutLeft');
+    }, 2000);
+  } else if (alertType == 'success') {
+    var _alert = $('#successAlert');
+
+    _alert.removeClass('fadeOutLeft');
+
+    _alert.addClass('animated fadeInRight').css({
+      'display': 'block'
+    });
+
+    setTimeout(function () {
+      _alert.removeClass('fadeInRight').addClass('fadeOutLeft');
+    }, 2000);
+  }
+};
+
+var callServices = function callServices() {
+  $.ajax({
+    type: "GET",
+    url: servicesUrl,
+    contentType: "application/json; charset=utf-8",
+    dataType: "json",
+    success: function success(msg) {
+      console.log(msg);
+    },
+    error: function error(e) {
+      console.log(e);
+    }
+  });
+};
+
+$("#LoginForm").submit(function (event) {
+  var password = $('#inputEmail').val();
+  var email = $('#inputPassword').val();
+
+  if (password != '' && email != '') {
+    callAlert('success');
+    callServices();
+  } else {
+    callAlert('error');
+  }
+
+  event.preventDefault();
+});
 },{"./mis/css/bootstrap.css":"mis/css/bootstrap.css","./styles/main.scss":"styles/main.scss","jquery":"../node_modules/jquery/dist/jquery.js","bootstrap":"../node_modules/bootstrap/dist/js/bootstrap.js","./mis/icons/style.css":"mis/icons/style.css","animate.css":"../node_modules/animate.css/animate.css"}],"../node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
@@ -18182,7 +18235,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "51156" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "52381" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

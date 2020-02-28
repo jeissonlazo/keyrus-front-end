@@ -16,8 +16,8 @@ correr el servidor de desarrollo
 ```
 npm run dev
 ```
-crear version de prodicion
+crear version de producion
 ```
 npm run build
 ```
-la version de desarrollo solo sirver en un servidor http 
+la version de produccion solo funciona en un servidor http 

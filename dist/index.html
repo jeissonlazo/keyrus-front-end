@@ -7,14 +7,16 @@
 <link rel="stylesheet" href="/src.e31bb0bc.css"></head>
 <body>
     <div class="container-fluid login-container">
-        <div class="alert alert-danger login-alert-danger shadow-sm animated fadeInRight delay-2s" role="alert">
-            <span class="icon-close"></span>
-          A simple danger alert—check it out!
+        <div class="login-alerts-container">
+            <div class="alert alert-danger login-alert-danger shadow-sm" role="alert" id="errorAlert">
+                <span class="icon-close"></span>
+                Preencha todos os campos do formulário
+            </div>
+            <div class="alert alert-success login-alert-success shadow-sm" role="alert" id="successAlert">
+                <span class="icon-check"></span>
+                login bem sucedido
+            </div>
         </div>
-        <div class="alert alert-success login-alert-success shadow-sm animated fadeInRight delay-2s" role="alert" id="successAlert">
-            <span class="icon-check"></span>
-            A simple success alert—check it out!
-          </div>
         <div class="row align-items-center">
             <div class="col-sm-3">
             </div>
@@ -22,7 +24,7 @@
                 <div class="card login-card shadow">
                     <div class="card-body">
                         <h5 class="card-title login-title">Entrar na minha conta</h5>
-                        <form>
+                        <form id="LoginForm">
                             <div class="input-group mb-3 login-input">
                                 <span class="icon-user"></span>
                                 <input type="email" class="form-control" aria-label="Sizing example input " aria-describedby="inputGroup-sizing-default" placeholder="Email" id="inputEmail">

@@ -8983,8 +8983,18 @@ body {
   overflow: hidden;
 }
 
-.login-alert-danger {
-  display: none;
+.login-alerts-container {
+  position: fixed;
+  top: 50px;
+  width: 100%;
+  margin: 0 auto;
+  max-width: 912px;
+}
+.login-alerts-container .alert {
+  z-index: 10;
+}
+.login-alerts-container .login-alert-danger {
+  display: block;
   position: relative;
   background: #EE7272;
   border: 1px solid #DB5252;
@@ -8995,14 +9005,13 @@ body {
   height: 50px;
   text-shadow: 1px 1px 1px rgba(255, 255, 255, 0.62);
 }
-.login-alert-danger span {
+.login-alerts-container .login-alert-danger span {
   position: absolute;
   left: 20px;
   top: 17px;
 }
-
-.login-alert-success {
-  display: none;
+.login-alerts-container .login-alert-success {
+  display: block;
   position: relative;
   background: #5BDD9A;
   border: 1px solid #49CF8B;
@@ -9013,7 +9022,7 @@ body {
   height: 50px;
   text-shadow: 1px 1px 1px rgba(255, 255, 255, 0.62);
 }
-.login-alert-success span {
+.login-alerts-container .login-alert-success span {
   position: absolute;
   left: 20px;
   top: 17px;
