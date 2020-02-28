@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container-fluid login-container">
+        <div class="alert alert-danger login-alert-danger shadow-sm animated fadeInRight delay-2s" role="alert">
+            <span class="icon-close"></span>
+          A simple danger alert—check it out!
+        </div>
+        <div class="alert alert-success login-alert-success shadow-sm animated fadeInRight delay-2s" role="alert" id="successAlert">
+            <span class="icon-check"></span>
+            A simple success alert—check it out!
+          </div>
+        <div class="row align-items-center">
+            <div class="col-sm-3">
+            </div>
+            <div class="col-sm-6">
+                <div class="card login-card shadow">
+                    <div class="card-body">
+                        <h5 class="card-title login-title">Entrar na minha conta</h5>
+                        <form>
+                            <div class="input-group mb-3 login-input">
+                                <span class="icon-user"></span>
+                                <input type="email" class="form-control" aria-label="Sizing example input " aria-describedby="inputGroup-sizing-default" placeholder="Email" id="inputEmail">
+                            </div>
+                            <div class="input-group mb-3 login-input">
+                                <span class="icon-padlock"></span>
+                                <input type="password" class="form-control" aria-label="Sizing example input " aria-describedby="inputGroup-sizing-default" placeholder="Senha" id="inputPassword">
+                            </div>
+                            <button type="submit" class="login-button btn btn-primary login-button">Entrar</button>
+                            <div class="form-group form-check login-checkbox">
+                                <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                                <label class="form-check-label" for="exampleCheck1">Mantenha-me conectado</label>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-3">
+            </div>
+        </div>
+        <div class="row">
+            <p class="login-disclaimer">Precisa de uma conta? <a href="#">Inscrever-se</a></p>
+            <p class="login-suggestion">Esqueceu sua senha? <a href="#">Clique aqui.</a></p>
+        </div>
+        <div class="row login-info">
+            <div class="col-12">
+                <div class="login-info-icon">
+                    <span class="icon-info"></span>
+                </div>
+                <div class="shadow-sm bg-white rounded login-keyrus">
+                    <p>Keyrus</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="./index.js"></script>
+</body>
+</html>
